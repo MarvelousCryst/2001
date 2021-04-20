@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        span {
+            color: red;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+        }
+        .nav {
+            background-color: lightgrey;
+            font-size: 10px;
+            display: flex;
+        }
+        .nav-item{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .main .news-pic{
+            margin-left: 50px;
+            display: flex;
+        }
+        
+        .main .news-pic .newsPic{
+            margin: 10px;
+        }
+        .main .news-pic .newsPic img{
+            border-radius: 10px;
+        }
+        .web-logo{
+            width:fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-text{
+            text-align:center;
+            border: 1px solid transparent;
+            cursor: pointer;
+            height: 32px;
+            padding: 0 15px;
+            margin:0 auto ;
+            font-size: 15px;
+            border-radius: 40px;
+            color: white;
+            background-color:white;
+        }
+        .search-text-box{
+            width: 400px;
+
+        }
+        .search-text input{
+            padding:10px;
+            border-width: 2px;
+        }
+        .search-text button{
+            background-color:lavenderblush;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .auto-complete{
+            width: 420px;
+            margin: 0 auto;
+            border: black 2px solid;
+            transform: translate(-41px, 6px);
+        }
+            
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav-item"><a href="http://news.baidu.com">新闻</a></div>
+        <div class="nav-item"><a href="https://www.hao123.com">hao123</a></div>
+        <div class="nav-item"><a href="https://map.baidu.com/@12974913,4842471,13z">地图</a></div>
+        <div class="nav-item"><a href="https://live.baidu.com">直播</a></div>
+        <div class="nav-item"><a href="https://haokan.baidu.com/?sfrom=baidu-top">视频</a></div>
+        <div class="nav-item"><a href="https://tieba.baidu.com/index.html">贴吧</a></div>
+        <div class="nav-item"><a href="https://xueshu.baidu.com">学术</a></div>
+    </div>
+
+
+    <div class="web-logo">
+    <img src="PCpad_012830ebaa7e4379ce9a9ed1b71f7507.png" width="280">
+    </div>
+
+
+    <div class="search-text"">
+            <input type="text" oninput="onInput(event)" class="search-text-box">
+            <button onclick="window.location.href='百度一下2优化.html'">百度一下</button>
+    </div>
+
+    <div id = "auto-complete-box" class="auto-complete" style="visibility: hidden;">
+
+        <ul id="auto-complete-list" class="suggest-list" >
+            <li>是什么</li>
+        </ul>
+
+    </div>
+    
+    <script>
+        function onInput(event){
+            var value = event.srcElement.value;
+            var innerHTML = "";
+            if (value) {
+                document.getElementById("auto-complete-box").style.visibility = 'visible';
+            } else {
+                document.getElementById("auto-complete-box").style.visibility = 'hidden';
+            }
+            innerHTML += '<li class="suggest-item">'+ value + "是什么" + "</li>";
+            innerHTML += '<li class="suggest-item">'+ value + "怎么学" + "</li>";
+            innerHTML += '<li class="suggest-item">'+ value + "能干什么" + "</li>";
+            document.getElementById("auto-complete-list").innerHTML= innerHTML;
+
+        }
+    </script>
+
+    <div class="content"style="display: flex;">
+        <div class="main">
+            <h1>微博之夜THE9成员喻言浅色短发造型</h1>
+            <div class="news-pic">
+                <div class="newsPic">
+                    <img src="IMG_6066.JPG" width="100">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6082.JPG" width="100">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6084.JPG" width="97">
+                </div>
+            </div>
+            
+            <p>
+                <span>热点</span> 微博 03-02 18:30
+            </p>
+            <h1>YG公司的权志龙被爆正在与同公司的女团成员金智妮热恋</h1>
+            <div class="news-pic">
+                <div class="newsPic">
+                    <img src="IMG_6663.JPG" width="200">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6664.PNG" width="165">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6665.PNG" width="140">
+                </div>
+            </div>
+    
+            <p>
+                <span>热点</span> Instagram 03-03 15:31
+            </p>
+            <h1>网红饽饽山情侣分手</h1>
+            <div class="news-pic">
+                <div class="newsPic">
+                    <img src="IMG_6666.PNG" width="100">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6668.PNG" width="100">
+                </div>
+                <div class="newsPic">
+                    <img src="IMG_6670.PNG" width="100">
+                </div>
+            </div>
+    
+            <p>
+                <span>热点</span> 抖音 03-04 8:58
+            </p>
+        </div>
+    
+        <ol style="width: 400px">
+            <li>
+                <div style="display: flex; justify-content: space-between">
+                    <div class="left">外交部召见欧盟驻华代表团团长</div>
+                    <div class="right">488万</div>
+                </div>
+            </li>
+            <li>
+                <div style="display: flex; justify-content: space-between">
+                    <div class="left">西方倒行逆施阻挡不了中国前进</div>
+                    <div class="right">488万</div>
+                </div>
+            <li>
+                    <div style="display: flex; justify-content: space-between">
+                        <div class="left">31省份新增确诊9例 均为境外输入</div>
+                        <div class="right">488万</div>
+                    </div>
+            <li>
+                        <div style="display: flex; justify-content: space-between">
+                            <div class="left">百度回港上市</div>
+                            <div class="right">488万</div>
+                        </div>
+            <li>
+                            <div style="display: flex; justify-content: space-between">
+                                <div class="left">人民日报评校内减负校外增负</div>
+                                <div class="right">488万</div>
+                            </div>
+            </li>
+        </ol>
+    </div>
+
+    
+    
+
+</body>
+
+</html>

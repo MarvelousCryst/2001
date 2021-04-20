@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript 数组</h1>
+    <p>遍历数组使用 for 循环: </p>
+    <p id="demo"></p>
+    <script>
+        var fruits, text, fLen, i;
+        fruits = ["Banana","Orange","Apple","Mango"];
+        fLen = fruits.length;
+        text = "<ul>";
+        for(i=0; i<fLen; i++){
+            text +="<li>" + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+
+        // var fruits, text, fLen, i;
+        //fruits = ["Banana","Orange","Apple","Mango","peach"];
+       // fLen = fruits.length;
+        // text = "<ul>";
+        // 
+        // text +="<li>" +ftuits[0]+ "</li>";
+        // text +="<li>" +ftuits[1]+ "</li>";
+        // text +="<li>" +ftuits[2]+ "</li>";
+        // text +="<li>" +ftuits[3]+ "</li>";
+        for(i = 0;i < fruits.length;i++){
+            text +="<li>" +ftuits[i]+ "</li>";
+        }
+        // 
+        // text += "</ul>";
+        // document.getElementById("demo").innerHTML = text;
+
+        //var person = {fname:"Bill", Iname:"Gates", age:62};
+        // var text = "";
+        // var x;
+        // for(x in person){
+        //     text += person[x];
+        // }
+        // while(条件){
+        //     要执行的代码块
+        // }
+
+
+
+        </script>
+
+
+
+</body>
+</html>
